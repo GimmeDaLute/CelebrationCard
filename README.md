@@ -117,7 +117,7 @@ const options = {
 }
 fetch(url, options)
   .then(console.log("Posted post"))
-  .catch(console.warn('Opa, something went wrong!'))  
+  .catch(err => console.warn('Opa, something went wrong!', err))  
 ```
 #### Other methods
 As well as 'GET' (default) and 'POST', we may also find endpoints which respond to the verbs 'PUT', 'PATCH' or 'DELETE'. Generally, 'PUT' is for when we want to replace something, 'PATCH' is for when we want to update one part of something and 'DELETE' is self-explanatory.
