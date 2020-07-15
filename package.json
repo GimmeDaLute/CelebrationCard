@@ -1,0 +1,25 @@
+{
+  "name": "fp_study_notes_forms_and_apis",
+  "version": "1.0.0",
+  "description": "Notes on the Form and APIs lecture",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha --reporter=nyan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getfutureproof/fp_study_notes_forms_and_apis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getfutureproof/fp_study_notes_forms_and_apis/issues"
+  },
+  "homepage": "https://github.com/getfutureproof/fp_study_notes_forms_and_apis#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "puppeteer": "^5.1.0"
+  }
+}

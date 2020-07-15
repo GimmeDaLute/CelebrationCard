@@ -95,7 +95,7 @@ const url = "https://api.github.com/users/getfutureproof"
 fetch(url)
   .then(resp => resp.json())
   .then(addEmailToDom)
-  .catch(console.warn('Opa, something went wrong!'))  
+  .catch(err => console.warn('Opa, something went wrong!', err))  
 
 function addEmailToDom(data){
   const footer = document.querySelector('footer');
