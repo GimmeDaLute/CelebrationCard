@@ -3,7 +3,6 @@ const expect = require('chai').expect;
 const puppeteer = require('puppeteer'); // https://devdocs.io/puppeteer/
 
 const fs = require('fs');
-const { doesNotMatch } = require('assert');
 
 let browser;
 let page;
@@ -52,10 +51,6 @@ describe('index.html', () => {
                 const type = await passwordInput.evaluate(el => el.getAttribute("type"), passwordInput);
                 expect(type).to.equal("password");
             })
-        })
-
-        describe('submit', () => {
-
         })
     });
 

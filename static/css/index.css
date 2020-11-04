@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+:root {
+    --primary-font: 'Quicksand', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    width: 100vw;
+    font-family: var(--primary-font);
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    background-color: rgba(59, 126, 126, 0.7); 
+    height: 200px; 
+    width: 100%;
+    padding: 20px;
+}
+
+h3 {
+    color: aliceblue;
+}
+
+form {
+    margin: 50px;
+}
+
+#repo-count {
+    font-size: 2em;
+    font-weight: 700;
+    color: rebeccapurple;
+}
+
+.light {
+    background-color: white;
+    color: rgba(59, 126, 126, 0.7);
+}
+
+.light header {
+    background-color: rgba(59, 126, 126, 0.7);
+    color: white;
+}
+
+.light header h3 {
+    color: white;
+}
+
+.dark {
+    background-color: rgba(59, 126, 126, 0.7);
+    color: white;
+}
+
+.dark header {
+    background-color: white;
+    color: rebeccapurple;
+}
+
+.dark header h3 {
+    color: rgba(59, 126, 126, 0.7);
+}

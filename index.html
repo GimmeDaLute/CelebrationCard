@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms & APIs</title>
-    <script defer src='js/index.js'></script>
+    <script defer src='static/js/github.js'></script>
+    <script defer src='static/js/darkMode.js'></script>
+    <link rel="stylesheet" href="static/css/index.css">
 </head>
-<body>
-    <header style="background-color: rgb(59, 126, 126); height: 50px; width: 100%;">
-        <h3 style="color:aliceblue;">Account Name: <span id="account-name"></span></h3>
+<body class="light">
+    <header>
+        <label for="dark-mode">Dark Mode</label>
+        <input type="checkbox" id="dark-mode">
+        <h3><span id="account-name"></span></h3>
     </header>
+    <section id="data">
+        <p><span id="repo-count">Enter username</span></p>
+    </section>
     <form id="my-form">
-        <label for="name">GitHub Userame</label>
-        <input type="text" id="name" placeholder="Your username"/>
-        <input type="submit" value="Send!">
+        <label for="name">GitHub Username</label>
+        <input type="text" id="name" placeholder="Enter username"/>
+        <input type="submit" id="submit" value="Send!">
     </form>
-    <footer>
-        <h2>Public Repos: <span id="repo-count"></span></h2>
-    </footer>
 </body>
 </html>

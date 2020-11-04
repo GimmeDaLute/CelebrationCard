@@ -1,3 +1,4 @@
+// API Interaction
 const form = document.querySelector('#my-form');
 form.addEventListener('submit', handleFormSubmit)
 
@@ -23,5 +24,8 @@ function renderPublicRepoCount(userData){
     const count = userData.public_repos;
     const span = document.getElementById('repo-count');
     span.textContent = count;
+    const result = document.querySelector('#data p')
+    result.append(' public repos')
+    document.getElementById('name').value = ''
 };
 
