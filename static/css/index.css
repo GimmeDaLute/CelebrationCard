@@ -14,7 +14,7 @@ body {
 
 header {
     background-color: rgba(59, 126, 126, 0.7); 
-    height: 200px; 
+    height: 15vh; 
     width: 100%;
     padding: 20px;
 }
@@ -39,7 +39,7 @@ form {
 }
 
 .light header {
-    background-color: rgba(59, 126, 126, 0.7);
+    background-color: (0,0,0,0.4);
     color: white;
 }
 
@@ -48,7 +48,7 @@ form {
 }
 
 .dark {
-    background-color: rgba(59, 126, 126, 0.7);
+    background-color: rgba(0,0,0,0.4);
     color: white;
 }
 
@@ -59,4 +59,10 @@ form {
 
 .dark header h3 {
     color: rgba(59, 126, 126, 0.7);
+}
+
+.error {
+    background-color: red;
+    color: white;
+    width: 100vw;
 }
