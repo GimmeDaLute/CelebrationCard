@@ -17,3 +17,7 @@ function darkMode(){
 function lightMode(){
     body.className = 'light';
 }
+
+try { 
+    module.exports = { switchMode, darkMode, lightMode }
+} catch (err) {}

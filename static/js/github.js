@@ -11,13 +11,12 @@ function handleFormSubmit(e){
     getGitHubUserInfo(name);
 }
 
-function getGitHubUserInfo(username){
+async function getGitHubUserInfo(username){
     const url = `https://api.github.com/users/${username}`
-
     fetch(url)
-        .then(resp => resp.json())
+        .then(r => r.json())
         .then(renderPublicRepoCount)
-        .catch(err => console.warn('Oh dear...', err))
+        .catch(renderError)
 };
 
 function renderPublicRepoCount(userData){
@@ -29,3 +28,13 @@ function renderPublicRepoCount(userData){
     document.getElementById('name').value = ''
 };
 
+function renderError(err){
+    const error = document.createElement('div');
+    error.textContent = `Oh no! ${err}`;
+    error.className = 'error';
+    document.querySelector('header').appendChild(error);
+}
+
+try {
+    module.exports = { handleFormSubmit, getGitHubUserInfo, renderPublicRepoCount, renderError }
+} catch(e) {}
