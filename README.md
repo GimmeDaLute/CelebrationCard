@@ -1,5 +1,5 @@
 ### Study Notes
-[Forms & APIs](https://github.com/getfutureproof/fp_guides_wiki/wiki/Forms-and-APIs)
+| [Forms & APIs](https://github.com/getfutureproof/fp_guides_wiki/wiki/Forms-and-APIs) | [Mocking Fetch Requests for Testing](https://github.com/getfutureproof/fp_guides_wiki/wiki/Mocking-Fetch-Requests-for-Testing-with-Jest) |
 
 # Exercise
 Working in pairs:
