@@ -2,18 +2,22 @@
 const helpers = require('./helpers');
 
 async function getGitHubUserInfo(username){
-    const url = `https://api.github.com/users/${username}`
-    fetch(url)
-        .then(r => r.json())
-        .then(helpers.renderPublicRepoCount)
-        .catch(helpers.renderError)
+    try {
+        const url = `https://api.github.com/users/${username}`
+        const response = await fetch(url)
+        const data = await response.json()
+        helpers.renderPublicRepoCount(data)
+    } catch (err) {
+        helpers.renderError(err)
+    }
+   
 };
 
 
 module.exports = { getGitHubUserInfo }
 },{"./helpers":3}],2:[function(require,module,exports){
 const { getGitHubUserInfo } = require('./api');
-const { darkMode, lightMode } = require('./helpers');
+const { darkMode, lightMode, renderName } = require('./helpers');
 
 function switchMode(e){
     e.target.checked ? darkMode() : lightMode();
@@ -23,9 +27,8 @@ function handleFormSubmit(e){
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
-    const accountNameHolder = document.getElementById('account-name')
-    accountNameHolder.textContent = name;
     getGitHubUserInfo(name);
+    renderName(name);
 }
 
 module.exports = { switchMode, handleFormSubmit }
@@ -49,6 +52,11 @@ function renderPublicRepoCount(userData){
     document.getElementById('name').value = ''
 };
 
+function renderName(name){
+    const accountNameHolder = document.getElementById('account-name')
+    accountNameHolder.textContent = name;
+}
+
 function renderError(err){
     const error = document.createElement('div');
     error.textContent = `Oh no! ${err}`;
@@ -62,7 +70,7 @@ function closeError(){
     error.remove();
 }
 
-module.exports = { darkMode, lightMode, renderPublicRepoCount, renderError, closeError }
+module.exports = { darkMode, lightMode, renderName, renderPublicRepoCount, renderError, closeError }
 },{}],4:[function(require,module,exports){
 const handlers = require('./handlers');
 
