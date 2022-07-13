@@ -14,6 +14,6 @@ Create a webpage that generates a celebration card.
 
 
 Stretch goals
-- Use the [Unsplash API](https://unsplash.com/documentation#search-photos) to pull in a background image based on the type of event.
+- Use the [Lorem Picsum API](https://picsum.photos/) to pull in a background image based on the type of event.
 
 
